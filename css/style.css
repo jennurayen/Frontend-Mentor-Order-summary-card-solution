@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+background: var(--Paleblue);
+}
+
+:root {
+    --Paleblue: hsl(225, 100%, 94%);
+    --Brightblue: hsl(245, 75%, 52%);
+    --Verypaleblue: hsl(225, 100%, 98%);
+    --Desaturatedblue: hsl(224, 23%, 55%);
+    --Darkblue: hsl(223, 47%, 23%);
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(/images/pattern-background-desktop.svg)  no-repeat ;
+}
+
+.card {
+    width: 450px;
+    height: 696px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: white;
+
+}
+.image{
+    width: 100%;
+}
+.image img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.details {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.details h1 {
+    font-weight: 900;
+    color: var(--Darkblue);
+}
+
+.details p {
+    width: 350px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--Desaturatedblue);
+}
+
+
+
+.price {
+    width: 100%;
+    height: 98px;
+    background: var(--Verypaleblue);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    padding: 25px;
+    position: relative;
+   
+}
+
+.price img {
+    margin-right: 22px;
+}
+.price div h3{
+    font-size: 16px;
+    color: var(--Darkblue);
+    font-weight: 700;
+}
+.price div span{
+    font-size: 16px;
+    color: var(--Desaturatedblue);
+}
+
+.price .change {
+    position: absolute;
+    right: 25px;
+    color: var(--Brightblue);
+    font-weight: 900;
+    text-decoration: underline;
+    font-size: 14px;
+    cursor: pointer;
+}
+.price .change:active {
+    color: hsl(245, 75%, 52%, .5);
+    text-decoration: none;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    background: hsl(245, 75%, 52%);
+    color: white;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0px 30px 20px hsl(245, 75%, 52%, .14);
+}
+.btn:active {
+    background: hsl(245, 75%, 52%, .6);
+   
+}
+
+.cancel {
+    color: hsl(224, 23%, 55%);
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+}
+.cancel:active {
+    color: hsl(223, 47%, 23%)
+}
+
+@media (max-width:375px) {
+    main {
+        
+        background: url(/images/pattern-background-mobile.svg)  no-repeat ;
+    }
+    .card{
+        width: 327px;
+        height: 565px;
+    }
+    .details {
+        margin-top: 0px;
+        
+    }
+    .details p {
+        width: 270px;
+    }
+    .price {
+        height: 90px;
+        padding: 15px;
+    }
+    .change{
+        right: 0px;
+    }
+
+}
